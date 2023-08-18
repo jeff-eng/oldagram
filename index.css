@@ -61,7 +61,6 @@ header {
 }
 
 .post-name {
-    font-size: 13px;
     margin: 0;
 }
 
@@ -110,11 +109,7 @@ header {
 
 /* Tablet and Desktop Screen Width */
 @media (min-width: 1067px) {
-    .post-footer {
-        font-size: 1.3em;
-    }
-
-    .post-name, .post-location {
+    .post-name, .post-location, .post-footer {
         font-size: 1.3em;
     }
 
