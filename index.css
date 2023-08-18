@@ -1,5 +1,94 @@
+
 html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    border-bottom: 1px solid #C6C6C6;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 0 15px;
+}
+
+.logo {
+    width: 127px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.user-avatar {
+    width: 34px;
+    border-radius: 50%;
+    height: 100%;
+}
+
+/* Post styling */
+article {
+    /* border: 2px dashed fuchsia; */
+}
+
+.post-avatar {
+    width: 34px;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.post-person {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 13px 10px;
+}
+
+.post-name {
+    font-size: 13px;
+    margin: 0;
+}
+
+.post-location {
+    font-size: 12px;
+    margin: 0;
+}
+
+.post-buttons {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 107px;
     margin: 0;
     padding: 0;
 }
 
+.post-btn {
+    height: 27px;
+    padding: 0px;
+    display: block;
+    cursor: pointer;
+}
+
+.post-btn:hover, .post-btn:focus {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.post-img {
+    width: 100%;
+    display: block;
+}
+
+.post-footer {
+    padding: 16px 10px;
+}
+
+.post-comment {
+    margin: 0;
+}
+
+.bold-type {
+    font-weight: 700;
+}

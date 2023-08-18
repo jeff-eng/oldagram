@@ -1,9 +1,42 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <img src="images/logo.png">
+        <header>
+            <a href="#"><img class="logo" src="images/logo.png" alt="oldagram logo"></a>
+            <img class="user-avatar" src="images/user-avatar.png" alt="user profile photo">
+        </header>
+        
+        <main>
+            <article class="post">
+                
+                <div class="post-person">
+                    <img class="post-avatar" src="images/avatar-vangogh.jpg" alt="avatar of user">
+                    <div class="post-user-details">
+                        <h2 class="post-name">Vincent van Gogh</h2>
+                        <p class="post-location">Zudert, Netherlands</p>
+                    </div>
+                </div>
+
+                <img class="post-img" src="images/post-vangogh.jpg" alt="user posted image">
+
+                <div class="post-footer">
+                    <ul class="post-buttons">
+                        <li><img class="post-btn" src="images/icon-heart.png" alt="heart icon for like button"></li>
+                        <li><img class="post-btn" src="images/icon-comment.png" alt="chat bubble icon for comment button"></li>
+                        <li><img class="post-btn" src="images/icon-dm.png" alt="paper airplane icon for direct message button"></li>
+                    </ul>
+                    <p class="post-likes bold-type"><span>21,492</span> likes</p>
+                    <p class="post-comment"><span class="post-username bold-type">vincey1853</span> <span class="post-text">just took a few mushrooms lol</span></p>
+                </div>
+
+            </article>
+        </main>
         <script src="index.js"></script>
     </body>
 </html>
