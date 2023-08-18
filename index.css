@@ -1,5 +1,119 @@
+/* Layout */
 html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 320px;
+    max-width: 30%;
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+/* Main containers styling */
+body, main {
+    background: #EDEDED;
+}
+
+article, header {
+    background: #FFF;
+}
+
+/* Header Layout and Styling*/
+header {
+    display: flex;
+    border-bottom: 1px solid #C6C6C6;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 0 15px;
+}
+
+.logo {
+    width: 127px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.user-avatar {
+    width: 34px;
+    border-radius: 50%;
+    height: 100%;
+}
+
+/* Post styling */
+.post-avatar {
+    width: 34px;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.post-person {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 13px 10px;
+}
+
+.post-name {
+    margin: 0;
+}
+
+.post-location {
+    font-size: 12px;
+    margin: 0;
+}
+
+.post-buttons {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 107px;
     margin: 0;
     padding: 0;
 }
 
+.post-btn {
+    height: 27px;
+    padding: 0px;
+    display: block;
+    cursor: pointer;
+}
+
+.post-btn:hover, .post-btn:focus {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.post-img {
+    width: 100%;
+}
+
+.post-footer {
+    padding: 16px 10px;
+}
+
+.post-comment {
+    margin: 0;
+}
+
+/* Utility Classes */
+.bold-type {
+    font-weight: 700;
+}
+
+/* Tablet and Desktop Screen Width */
+@media (min-width: 1067px) {
+    .post-name, .post-location, .post-footer {
+        font-size: 1.3em;
+    }
+
+    .post-avatar {
+        width: 3em;
+    }
+}
