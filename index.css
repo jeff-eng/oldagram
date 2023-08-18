@@ -1,4 +1,4 @@
-
+/* Layout */
 html, body {
     margin: 0;
     padding: 0;
@@ -6,7 +6,26 @@ html, body {
     font-size: 13px;
 }
 
-/* Header Styling */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 320px;
+    max-width: 30%;
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+/* Main containers styling */
+body, main {
+    background: #EDEDED;
+}
+
+article, header {
+    background: #FFF;
+}
+
+/* Header Layout and Styling*/
 header {
     display: flex;
     border-bottom: 1px solid #C6C6C6;
@@ -28,10 +47,6 @@ header {
 }
 
 /* Post styling */
-article {
-    /* border: 2px dashed fuchsia; */
-}
-
 .post-avatar {
     width: 34px;
     height: 100%;
@@ -78,7 +93,6 @@ article {
 
 .post-img {
     width: 100%;
-    display: block;
 }
 
 .post-footer {
@@ -89,6 +103,22 @@ article {
     margin: 0;
 }
 
+/* Utility Classes */
 .bold-type {
     font-weight: 700;
+}
+
+/* Tablet and Desktop Screen Width */
+@media (min-width: 1067px) {
+    .post-footer {
+        font-size: 1.3em;
+    }
+
+    .post-name, .post-location {
+        font-size: 1.3em;
+    }
+
+    .post-avatar {
+        width: 3em;
+    }
 }
