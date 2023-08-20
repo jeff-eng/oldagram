@@ -1,5 +1,5 @@
 # Random Password Generator
-Instagram-like clone focused primarily on implementing CSS. 
+Instagram-like clone focused primarily on implementing CSS. Double-clicking on the "like" button increments or decrements the likes, depending the clicked/not-clicked state. 
 
 ![oldagram project screenshot](images/oldagram_screenshot.png)
 
