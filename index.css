@@ -4,6 +4,7 @@ html, body {
     padding: 0;
     font-family: 'Source Sans 3', sans-serif;
     font-size: 13px;
+    background: #EDEDED;
 }
 
 main {
@@ -17,16 +18,12 @@ main {
 }
 
 /* Main containers styling */
-body, main {
-    background: #EDEDED;
-}
-
-article, header {
+article, .nav--header {
     background: #FFF;
 }
 
 /* Header Layout and Styling*/
-header {
+.nav--header {
     display: flex;
     border-bottom: 1px solid #C6C6C6;
     justify-content: space-between;
@@ -40,37 +37,35 @@ header {
     padding-bottom: 5px;
 }
 
-.user-avatar {
+.user--avatar {
     width: 34px;
     border-radius: 50%;
-    height: 100%;
 }
 
 /* Post styling */
-.post-avatar {
-    width: 34px;
-    height: 100%;
-    border-radius: 50%;
-}
-
-.post-person {
+.post--header {
     display: flex;
     align-items: center;
     gap: 7px;
     padding: 13px 10px;
 }
-
-.post-name {
-    margin: 0;
-    font-size: inherit;
+.post--avatar {
+    width: 34px;
+    border-radius: 50%;
 }
 
-.post-location {
+
+.post--name {
+    margin: 0;
+    font-size: 13px;
+}
+
+.post--location {
     font-size: 12px;
     margin: 0;
 }
 
-.post-buttons {
+.post--buttons {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -79,27 +74,25 @@ header {
     padding: 0;
 }
 
-.post-btn {
+.post--btn {
     height: 27px;
-    padding: 0px;
     display: block;
     cursor: pointer;
 }
 
-.post-btn:hover, .post-btn:focus {
+.post--btn:hover, .post--btn:focus {
     opacity: 50%;
-    cursor: pointer;
 }
 
-.post-img {
+.post--img {
     width: 100%;
 }
 
-.post-footer {
+.post--footer {
     padding: 16px 10px;
 }
 
-.post-comment {
+.post--comment {
     margin: 0;
 }
 
@@ -110,11 +103,11 @@ header {
 
 /* Tablet and Desktop Screen Width */
 @media (min-width: 1067px) {
-    .post-name, .post-location, .post-footer {
+    .post--name, .post--location, .post--footer {
         font-size: 1.3em;
     }
 
-    .post-avatar {
+    .post--avatar {
         width: 3em;
     }
 }

@@ -17,8 +17,8 @@ const posts = [
         location: "Ornans, France",
         avatar: "images/avatar-courbet.jpg",
         post: "images/post-courbet.jpg",
-        avatarAltTxt: 'Gustave Courbet portrait',
-        postImgAltTxt: 'portrait painting of Gustave Courbet',
+        avatarAltText: 'Gustave Courbet portrait',
+        postImgAltText: 'portrait painting of Gustave Courbet',
         comment: "i'm feelin a bit stressed tbh",
         likes: 4,
         liked: false
@@ -29,8 +29,8 @@ const posts = [
         location: "Paris, France",
         avatar: "images/avatar-ducreux.jpg",
         post: "images/post-ducreux.jpg",
-        avatarAltTxt: 'Joseph Ducreux portrait',
-        postImgAltTxt: 'portrait painting of Joseph Ducreux',
+        avatarAltText: 'Joseph Ducreux portrait',
+        postImgAltText: 'portrait painting of Joseph Ducreux',
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
         likes: 152,
         liked: false
@@ -43,16 +43,17 @@ const mainEl = document.getElementById('posts');
 const renderedArticleEls = posts.map((currentObj, index) => renderPost(currentObj, index));
 mainEl.append(...renderedArticleEls);
 
+// Meet FunctionZilla, "King of the Functions"
 function renderPost(postObj, index) {
     // Create elements
     const article = document.createElement('article');
-    const postPersonDiv = document.createElement('div');
+    const postHeader = document.createElement('header');
     const avatarImg = document.createElement('img');
     const userDetailsDiv = document.createElement('div');
     const postNameHeading = document.createElement('h2');
     const postLocationParagraph = document.createElement('p');
     const postImg = document.createElement('img');
-    const postFooterDiv = document.createElement('div');
+    const postFooter = document.createElement('footer');
     const buttonsList = document.createElement('ul');
     const li1 = document.createElement('li');
     const li2 = document.createElement('li');
@@ -67,19 +68,19 @@ function renderPost(postObj, index) {
     const postTextSpan = document.createElement('span');
 
     // Set classes
-    postPersonDiv.classList.add('post-person');
-    avatarImg.classList.add('post-avatar');
-    postNameHeading.classList.add('post-name');
-    postImg.classList.add('post-img');
-    postFooterDiv.classList.add('post-footer');
-    buttonsList.classList.add('post-buttons');
-    heartIcon.classList.add('post-btn');
-    commentIcon.classList.add('post-btn');
-    directMessageIcon.classList.add('post-btn');
-    postLocationParagraph.classList.add('post-location');
-    likesParagraph.classList.add('post-likes', 'bold-type');
-    commentParagraph.classList.add('post-comment');
-    usernameSpan.classList.add('post-username', 'bold-type');
+    postHeader.classList.add('post--header');
+    avatarImg.classList.add('post--avatar');
+    postNameHeading.classList.add('post--name');
+    postImg.classList.add('post--img');
+    postFooter.classList.add('post--footer');
+    buttonsList.classList.add('post--buttons');
+    heartIcon.classList.add('post--btn');
+    commentIcon.classList.add('post--btn');
+    directMessageIcon.classList.add('post--btn');
+    postLocationParagraph.classList.add('post--location');
+    likesParagraph.classList.add('post--likes', 'bold-type');
+    commentParagraph.classList.add('post--comment');
+    usernameSpan.classList.add('post--username', 'bold-type');
     
     // Set attributes
     avatarImg.setAttribute('src', `${postObj.avatar}`);
@@ -93,7 +94,7 @@ function renderPost(postObj, index) {
     directMessageIcon.setAttribute('src', 'images/icon-dm.png');
     directMessageIcon.setAttribute('alt', 'paper airplane icon for direct message button');
     heartIcon.setAttribute('data-index', index);
-    likesSpan.setAttribute('id', `like-span${index}`);
+    likesSpan.setAttribute('id', `like--span${index}`);
 
     // Populate elements with object data
     postNameHeading.textContent = postObj.name;
@@ -116,9 +117,11 @@ function renderPost(postObj, index) {
     buttonsList.append(li1, li2, li3);
     commentParagraph.append(usernameSpan, postTextSpan);
     userDetailsDiv.append(postNameHeading, postLocationParagraph);
-    postPersonDiv.append(avatarImg, userDetailsDiv);   
-    postFooterDiv.append(buttonsList, likesParagraph, commentParagraph);
-    article.append(postPersonDiv, postImg, postFooterDiv);
+    postHeader.append(avatarImg, userDetailsDiv);   
+    postFooter.append(buttonsList, likesParagraph, commentParagraph);
+    article.append(postHeader, postImg, postFooter);
+
+    console.log(postObj.avatarAltText);
 
     return article;
 }
@@ -131,5 +134,5 @@ function updateLikeCount(index) {
     currentPost.liked = !currentPost.liked;
 
     // Update the DOM element
-    document.getElementById(`like-span${index}`).textContent = currentPost.likes;
+    document.getElementById(`like--span${index}`).textContent = currentPost.likes;
 }
