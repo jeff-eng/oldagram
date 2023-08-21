@@ -44,6 +44,14 @@ const mainEl = document.getElementById('posts');
 const renderedArticleEls = posts.map((currentObj, index) => renderPost(currentObj, index));
 mainEl.append(...renderedArticleEls);
 
+document.addEventListener('dblclick', (event) => {
+    const likedPostIndex = event.target.dataset.index;
+
+    if (likedPostIndex) {
+        updateLikeCount(likedPostIndex);
+    }
+});
+
 function renderPost(postObj, index) {
     const article = document.createElement('article');
 
@@ -55,7 +63,7 @@ function renderPost(postObj, index) {
         <img class="post--img" src="${postObj.post}" alt="${postObj.postImgAltText}">
         <footer class="post--footer">
             <ul class="post--buttons">
-                <li><img class="post--btn" src="images/icon-heart.png" ondblclick="updateLikeCount(${index})" alt="heart icon for like button" data-index="${index}"></li>
+                <li><img class="post--btn" src="images/icon-heart.png" alt="heart icon for like button" data-index="${index}"></li>
                 <li><img class="post--btn" src="images/icon-comment.png" alt="chat bubble icon for comment button"></li>
                 <li><img class="post--btn" src="images/icon-dm.png" alt="paper airplane icon for direct message button"></li>
             </ul>
